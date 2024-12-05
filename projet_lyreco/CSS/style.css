@@ -6,29 +6,46 @@ body {
     text-align: center;
     background-color: #f4f4f4;
     color: #333;
+    overflow: hidden; /* Empêcher le défilement pendant l'animation */
 }
 
 header {
     background-color: #004d40;
     color: #ffffff;
     padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed; /* Rendre le header fixe en haut de la page */
+    top: 0;
+    left: 0;
+    z-index: 10; /* S'assurer que le header soit au-dessus des autres éléments */
+}
+
+header h1 {
+    margin: 0; /* Retirer les marges par défaut */
+    font-size: 2em;
 }
 
 main {
     position: relative;
-    height: 80vh;
+    margin-top: 100px; /* Ajouter de l'espace pour éviter que le contenu soit caché derrière le header */
+    height: calc(80vh - 100px); /* Ajuster la hauteur du main en fonction de la hauteur du header */
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 footer {
     background-color: #004d40;
     color: #ffffff;
     padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Logo */
+/* Logo simplifié */
 .logo-container {
     position: relative;
     width: 100%;
@@ -36,34 +53,52 @@ footer {
 }
 
 #logo {
-    width: 100px;
+    width: 60px;
     height: auto;
     position: absolute;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 #logo:hover {
     transform: scale(1.2);
+    opacity: 1;
 }
 
-/* Animation */
-@keyframes spin {
+/* Animation des feux d'artifice */
+@keyframes fireworks {
     0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    100% {
+        transform: scale(0);
         opacity: 0;
-        transform: scale(2);
+    }
+    50% {
+        transform: scale(5);
+        opacity: 1;
+        box-shadow: 0 0 20px 20px rgba(255, 69, 0, 0.8), 0 0 40px 40px rgba(255, 255, 0, 0.8);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Effet de bruit lumineux pour l'animation de feu d'artifice global */
+.firework {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.6) 30%, rgba(255, 0, 0, 0.6) 100%);
+    animation: fireworks 1.5s ease-out forwards;
+}
+
+/* Animation de texte lumineux */
+@keyframes glowingText {
+    0% {
+        text-shadow: 0 0 5px #004d40, 0 0 10px #004d40, 0 0 20px #004d40;
+    }
+    100% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
     }
 }
