@@ -21,15 +21,15 @@
         <!-- Glass Cards Section -->
         <div class="glass-cards-container">
             <!-- Carte "Notre vision" -->
-            <div class="glass-card">
-                <h3>Notre vision:</h3>
-                <p>L'océan se réchauffe et devient plus acide en conséquence directe de la dissolution d'une plus grande quantité de CO2. Ces changements endommagent de manière irréversible les écosystèmes marins.</p>
+            <div class="glass-card"> 
+                <img id="logoAccueil" src="assets/eye.png">
+                <p>Notre Vision: L'océan se réchauffe et devient plus acide en conséquence directe de la dissolution d'une plus grande quantité de CO2. Ces changements endommagent de manière irréversible les écosystèmes marins.</p>
             </div>
             
             <!-- Carte "Notre mission" -->
             <div class="glass-card">
-                <h3>Notre mission:</h3>
-                <p>Décarbonner les navires fonctionnant aux énergies fossiles grâce à de nouveaux systèmes véliques adaptés.</p>
+                <img id="logoAccueil" src="assets/cible.png">
+                <p>Notre mission: Décarbonner les navires fonctionnant aux énergies fossiles grâce à de nouveaux systèmes véliques adaptés.</p>
             </div>
         </div>
 

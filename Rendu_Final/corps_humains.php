@@ -14,6 +14,12 @@
 
     <!-- Contenu principal -->
     <main>
+        <div id="infoBox"
+            style="display:none; position:absolute; background:#fff; border:1px solid #000; padding:10px; border-radius:5px;">
+            <h3 id="infoTitle"></h3>
+            <p id="infoText"></p>
+        </div>
+
         <div id="homme">
             <svg viewBox="-260 0 1920 680" xmlns="http://www.w3.org/2000/svg">
                 <!-- Tête -->
@@ -100,10 +106,43 @@
                 <ellipse class="body-part" cx="187.5" cy="645" rx="22.5" ry="15" data-title="Les Pieds"
                     data-info="Les pieds permettent le mouvement et la stabilité, tout comme les bancs de sable stabilisent les côtes.">
                 </ellipse>
-
+            </svg>
         </div>
     </main>
     <?php require_once 'footer.php' ?>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const bodyParts = document.querySelectorAll('.body-part');
+        const infoBox = document.getElementById('infoBox'); // Supposons que cette boîte existe déjà
+        const infoTitle = document.getElementById('infoTitle'); // Élément où insérer le titre
+        const infoText = document.getElementById('infoText');   // Élément où insérer le texte
+
+        bodyParts.forEach(part => {
+            part.addEventListener('click', (e) => {
+                const title = part.getAttribute('data-title');
+                const info = part.getAttribute('data-info');
+
+                // Mettre à jour le contenu de la boîte
+                infoTitle.textContent = title;
+                infoText.textContent = info;
+
+                // Positionner et afficher la boîte d'information
+                infoBox.style.top = `${e.pageY}px`;
+                infoBox.style.left = `${e.pageX}px`;
+                infoBox.style.display = 'block';
+            });
+        });
+
+        // Fermer la boîte si l'utilisateur clique en dehors
+        document.addEventListener('click', (e) => {
+            if (!e.target.classList.contains('body-part') && infoBox.style.display === 'block') {
+                infoBox.style.display = 'none';
+            }
+        });
+    });
+
+
+</script>
 
 </html>
