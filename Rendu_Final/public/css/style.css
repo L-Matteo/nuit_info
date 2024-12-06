@@ -1,16 +1,5 @@
 /* Styles généraux */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    position: relative;
-    min-height: 100vh; /* Assure que le body occupe au moins la hauteur de l'écran */
-    display: flex; /* Utilisation de Flexbox pour la mise en page */
-    flex-direction: column; /* Organiser les éléments en colonne */
-}
+
 
 /* Vidéo de fond */
 #background-video {
@@ -24,65 +13,7 @@ body {
 }
 
 /* Header */
-header {
-    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
-    color: #ffffff;
-    padding: 20px 20px;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
 
-/* Utilisation de flexbox pour simuler un tableau */
-.header-table {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.header-left {
-    flex: 1;
-    text-align: left;
-}
-
-.header-right {
-    flex: 1;
-    text-align: right;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    background: linear-gradient(to right, #ffffff, #0077be);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: none;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-}
-
-header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 1px solid transparent;
-    transition: background 0.3s, border 0.3s;
-}
-
-header nav ul li a:hover {
-    background: #ffffff;
-    color: #0077be;
-    border: 1px solid #0077be;
-}
 
 /* Logo Container */
 .logo-container {
@@ -105,20 +36,6 @@ header nav ul li a:hover {
     transform: scale(1.1); /* Légère animation de mise en surbrillance */
 }
 
-/* Footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #ffffff;
-    text-align: center;
-    padding: 15px 20px;
-    margin-top: auto; /* Assure que le footer reste au bas de la page */
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
-    color: #ffffff;
-}
 
 /* Pop-up */
 .popup {
@@ -239,4 +156,77 @@ footer p {
         width: 80%;  /* Augmenter la largeur des cartes pour les petits écrans */
         margin: 1rem auto;
     }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 10vh;
+    background-color: #e0f7fa;
+}
+h1 {
+    color: #00796b;
+}
+
+#container {
+    position: relative;
+    width: 70%;
+    max-width: 10rem;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.info-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: 1px solid #00796b;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 10;
+}
+
+.info-box h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #00796b;
+}
+
+.info-box p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+#homme{
+    align-items: center;
+}
+.body-part {
+    
+    stroke: #000000;
+    stroke-width: 0.02rem;
+    fill: #80cbc4;
+    transition: transform 0.3s, fill 0.3s;
+}
+#Coeur  {
+stroke: #000000;
+stroke-width: 0.02rem;
+fill: #ff0000;
+}
+#Coeur:hover {
+    fill: #920505;
+}
+
+.body-part:hover {
+
+    fill: #00796b;
 }

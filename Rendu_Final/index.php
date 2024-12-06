@@ -14,24 +14,7 @@
         Votre navigateur ne supporte pas la vidéo.
     </video>
 
-    <!-- Header -->
-    <header>
-        <div class="header-table">
-            <div class="header-left">
-                <h1>Race for Water</h1>
-            </div>
-            <div class="header-right">
-                <nav>
-                    <ul>
-                        <li><a href="index.php" class="active">Accueil</a></li>
-                        <li><a href="#ocean">L'océan</a></li>
-                        <li><a href="#podcast">Podcast</a></li>
-                        <li><a href="corps_humains.php">Corps Humains</a></li> <!-- Rediriger vers la page corps_humains.php -->
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <?php require_once 'nav.php'?>
 
     <!-- Contenu principal -->
     <main>
@@ -55,10 +38,6 @@
             <img id="logo" src="assets/logo_lyreco.png" alt="Logo Lyreco" style="position: absolute;">
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer>
-        <p class="wave-text">&copy; <?= date('Y') ?> Race for Water. Tous droits réservés.</p>
-    </footer>
+<?php require_once 'footer.php'?>
 </body>
 </html>

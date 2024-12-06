@@ -1,0 +1,70 @@
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
+    color: #ffffff;
+    padding: 20px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Utilisation de flexbox pour simuler un tableau */
+.header-table {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-left {
+    flex: 1;
+    text-align: left;
+}
+
+.header-right {
+    flex: 1;
+    text-align: right;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #ffffff, #0077be);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: background 0.3s, border 0.3s;
+}
+
+header nav ul li a:hover {
+    background: #ffffff;
+    color: #0077be;
+    border: 1px solid #0077be;
+}body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    position: relative;
+    min-height: 100vh; /* Assure que le body occupe au moins la hauteur de l'écran */
+    display: flex; /* Utilisation de Flexbox pour la mise en page */
+    flex-direction: column; /* Organiser les éléments en colonne */
+}

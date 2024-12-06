@@ -75,3 +75,25 @@ document.addEventListener("DOMContentLoaded", () => {
     setRandomPosition(); // Initialiser le logo à une position aléatoire
     logo.style.animation = "move-logo 10s linear infinite"; // Animation de déplacement aléatoire du logo
 });
+        const bodyParts = document.querySelectorAll('.body-part');
+        const infoBox = document.getElementById('infoBox');
+        const infoTitle = document.getElementById('infoTitle');
+        const infoText = document.getElementById('infoText');
+
+        bodyParts.forEach(part => {
+            part.addEventListener('click', (e) => {
+                const title = part.getAttribute('data-title');
+                const info = part.getAttribute('data-info');
+                infoTitle.textContent = title;
+                infoText.textContent = info;
+                infoBox.style.display = 'block';
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.classList.contains('body-part')) {
+                infoBox.style.display = 'none';
+                infoBox.style.top = `${e.pageY - 80}px`;
+                infoBox.style.left = `${e.pageX + 20}px`;
+            }
+        });
