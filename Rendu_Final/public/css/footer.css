@@ -12,3 +12,15 @@ footer p {
     font-size: 1rem;
     color: #ffffff;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    position: relative;
+    min-height: 100vh; /* Assure que le body occupe au moins la hauteur de l'écran */
+    display: flex; /* Utilisation de Flexbox pour la mise en page */
+    flex-direction: column; /* Organiser les éléments en colonne */
+}

@@ -236,3 +236,12 @@ fill: #ff0000;
     height: 4rem;
     margin-top: 1rem;
 }
+#BackGround{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* La vidéo couvre toute la surface sans déformation */
+    z-index: -1;
+}

@@ -10,6 +10,10 @@
 </head>
 
 <body>
+<video autoplay loop muted id="background-video">
+        <source src="https://videos.pexels.com/video-files/3765078/3765078-uhd_2560_1440_30fps.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
     <?php require_once 'nav.php' ?>
 
     <!-- Contenu principal -->
