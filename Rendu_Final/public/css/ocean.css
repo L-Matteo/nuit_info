@@ -1,0 +1,40 @@
+.body{
+    background-image: url('../../assets/ocean.png');
+}
+.glass-cards-container {
+    display: flex;
+    flex-direction: column; /* Arrange cards vertically */
+    align-items: center; /* Center the cards horizontally */
+    gap: 8rem; /* Space between the two cards */
+    margin-top: 6rem; /* Space from the top */
+}
+
+/* Glass Cards */
+.glass-card {
+    margin-left: auto;
+    margin-right: auto;
+    height: 10rem;
+    width: 55rem;
+    font-size: 20px; /* Augmenter la taille de la police */
+    color: #000; /* Couleur du texte en noir */
+    background-color: rgba(63, 142, 207, 0.25);
+    padding: 10px 20px;
+    border: 1px solid rgba(80, 208, 192, .25);
+    border-radius: 50px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+    backdrop-filter: blur(15px);
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Centre le contenu verticalement */
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Responsive : ajuster les glass-cards sur les petits écrans */
+@media (max-width: 768px) {
+    .glass-card {
+        width: 80%;  /* Augmenter la largeur des cartes pour les petits écrans */
+        margin: 1rem auto;
+    }
+}

@@ -8,8 +8,8 @@
                 <nav>
                     <ul>
                         <li><a href="index.php">Accueil</a></li>
-                        <li><a href="#ocean">L'océan</a></li>
-                        <li><a href="#podcast">Podcast</a></li>
+                        <li><a href="ocean.php">L'océan</a></li>
+                        <li><a href="podcast.php">Podcast</a></li>
                         <li><a href="corps_humains.php" class="active">Corps Humains</a></li>
                     </ul>
                 </nav>
